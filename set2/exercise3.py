@@ -7,7 +7,7 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    if (a_number%2) == 0:
+    if (a_number % 2) == 0:        
         return True
     else:    
         return False
@@ -45,10 +45,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']    
     """
-    mylist=['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
-    for item in mylist:
-    
-        return item
+    mylist=[]
+    for i in range(10):
+        mylist.append("*")    
+    return mylist
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -58,7 +58,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    mylist=[]    
+    for i in range(number_of_items):
+        mylist.append(symbol)
+
+    return mylist
 
 
 def loops_2():
