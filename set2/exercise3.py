@@ -48,7 +48,7 @@ def loops_1a():
     mylist=[]
     for i in range(10):
         mylist.append("*")    
-    return mylist
+        return mylist
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -83,7 +83,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    outer_bucket=[]
+    for i in range(10):
+        inner_bucket=[]
+        for j in range(10):
+           inner_bucket.append("*")
+        outer_bucket.append(inner_bucket)    
+    return outer_bucket    
+   
 
 
 def loops_3():
@@ -107,8 +114,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
-
+    outer_bucket=[]
+    for i in range(10):
+        inner_bucket=[]
+        for j in range(10):
+            value = str(i)
+            inner_bucket.append(value)
+        outer_bucket.append(inner_bucket)    
+    return outer_bucket      
+ 
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -127,8 +141,16 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
-
+    outer_bucket=[]
+    for i in range(10):
+        inner_bucket=[]
+        k=0
+        for j in range(10):          
+            inner_bucket.append(k)
+            k = k+1
+        outer_bucket.append(inner_bucket)    
+    return outer_bucket     
+ 
 
 def loops_5():
     """Make the coordinates of the block.
@@ -154,7 +176,20 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    outer_bucket=[]
+    for i in range(10):
+        first_value = "i"+str(i)              
+        
+        inner_bucket=[]            
+        for j in range(5): 
+            second_value = "j"+str(j) 
+            coord = (first_value, second_value)         
+            inner_bucket.append(coord)
+            
+        outer_bucket.append(inner_bucket)    
+    return outer_bucket
+    
+
 
 
 def loops_6():
@@ -177,7 +212,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    outer_bucket=[]
+    for i in range(10):
+        k=0
+        inner_bucket=[]      
+        for j in range(i):          
+            inner_bucket.append(k)
+            k = k+1
+        outer_bucket.append(inner_bucket)    
+    return outer_bucket  
+        
 
 
 def loops_7():
