@@ -245,7 +245,24 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    outer_bucket=[]
+    checkerList=[]
+    for i in range(5):        
+        inner_bucket=[]        
+        startingvalue = 4
+        checkerList.append(startingvalue+i)
+        checkerList.append(startingvalue-i)        
+        for j in range(9):          
+            if j in (checkerList):
+                inner_bucket.append("*")
+            else:
+                inner_bucket.append(" ")             
+        outer_bucket.append(inner_bucket)    
+    
+    return outer_bucket 
+   
+    
+    
 
 
 def little_printer(some_kind_of_list, exercise_name):
