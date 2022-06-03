@@ -7,11 +7,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    if (a_number % 2) == 0:        
-        return True
-    else:    
-        return False
-
+    return (a_number % 2) != 0       
+       
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -143,11 +140,9 @@ def loops_4():
     """
     outer_bucket=[]
     for i in range(10):
-        inner_bucket=[]
-        k=0
+        inner_bucket=[]     
         for j in range(10):          
-            inner_bucket.append(k)
-            k = k+1
+            inner_bucket.append(str(j))         
         outer_bucket.append(inner_bucket)    
     return outer_bucket     
  
@@ -213,12 +208,11 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     outer_bucket=[]
-    for i in range(10):
-        k=0
+    for i in range(10):      
         inner_bucket=[]      
         for j in range(i):          
-            inner_bucket.append(k)
-            k = k+1
+            inner_bucket.append(str(j))
+        
         outer_bucket.append(inner_bucket)    
     return outer_bucket  
         
